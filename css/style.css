@@ -59,8 +59,12 @@ label:hover{
     clear: both;
     font-size: 18px;
 }
+.button-row2{
+    margin-top: 15px;
+}
 .button-row{
     position: relative;
+    text-align: center;
 }
 .filter-buttons{
     right: 0;

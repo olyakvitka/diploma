@@ -18,9 +18,18 @@
 			, media: false
 			, staticPath: '/tmp/'
 		};
+
+		function saveImg(){
+			var canvas = document.querySelector("#result canvas"), ctx = canvas.getContext("2d");
+
+			canvas.toBlob(function(blob) {
+				saveAs(blob, "image.png");
+			});
+		}
 	</script>
 	<script src="./js/FileAPI.min.js"></script><style type="text/css"></style>
 	<script src="./js/caman.full.min.js"></script>
+	<script src="./js/filesaver.min.js"></script>
 
 	<link href="./css/bootstrap.min.css" rel="stylesheet">
 	<link href="./css/style.css" rel="stylesheet">
@@ -83,6 +92,12 @@
 		</div>
 
 	</div>
+
+	<div class="row button-row button-row2" style="display: none;">
+		<div class="col-md-10">
+			<label id="download" onclick="saveImg()" class="btn">Зберегти зображення</label>
+		</div>
+	</div>
 </div>
 
 <script>
@@ -128,6 +143,7 @@
 			if( loading ){
 				result.innerHTML = '<div class="loader"></div>';
 			}
+			document.querySelector('.button-row2').style.display = 'block';
 //			output.style.display = '';
 
 			FileAPI.Image(file)
