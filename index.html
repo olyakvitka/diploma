@@ -16,7 +16,7 @@
 		var FileAPI = {
 			  debug: true
 			, media: false
-			, staticPath: '../dist/'
+			, staticPath: '/tmp/'
 		};
 	</script>
 	<script src="./js/FileAPI.min.js"></script><style type="text/css"></style>
@@ -89,7 +89,7 @@
 	(function (){
 		var
 				file
-				, filter = 'vintage' // default filter
+				, filter = 'lomo' // default filter
 				, processing = false
 				;
 
@@ -116,7 +116,7 @@
 				processing = { el: el, html: el.innerHTML };
 
 				el.parentNode.querySelector('.Active').classList.remove('Active');
-				el.innerHTML = 'Rendering&hellip;';
+				el.innerHTML = 'Виконується...';
 				el.className = 'Active';
 
 				_applyFilter();
