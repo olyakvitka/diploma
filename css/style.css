@@ -2,7 +2,7 @@
     font-size: 14px;
 }
 .navbar-static-top {
-    margin-bottom: 30px;
+    margin-bottom: 19px;
 }
 .btn {
     padding: 10px 50px;
@@ -46,12 +46,12 @@ label:hover{
     padding: 0px 10px;
     margin: 5px;
     border: none;
-    font-size: 13px;
-    width: 120px;
+    font-size: 14px;
+    width: 130px;
     cursor: pointer;
 }
 #PresetFilters a.Active {
-    background-color: #7CB4E4;
+    background-color: #81c784;
 }
 #button-block{
     text-align: center;
